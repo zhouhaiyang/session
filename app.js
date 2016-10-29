@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Created by Administrator on 2016/10/29.
  */
 var express = require('express');
@@ -60,10 +60,7 @@ app.post('/login',function(req,res){
 });
 //用户主页
 app.get('/user',function(req,res){
-    console.log(req.session)
-    console.log(req.cookies);
-    console.log(req.session.cookie);
-    res.render('user',{username:req.cookies.username})
+    res.render('user',{username:req.session})
 });
 
 
